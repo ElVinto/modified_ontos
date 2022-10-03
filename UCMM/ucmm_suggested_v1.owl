@@ -1,3 +1,4 @@
+<!-- Are all the prefixes necessary ? they do not seem to be used  -->
 <rdf:RDF
     xmlns:repr="http://sweetontology.net/repr#"
     xmlns:cpm="http://purl.org/voc/cpm#"
@@ -57,9 +58,11 @@
     <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-06-04</dct:modified>
     <rdfs:comment xml:lang="fr">UCMM est un modèle de métadonnées flexible qui décrit les ensembles de données de diverses disciplines en utilisant un paradigme commun basé sur le concept d'observation. Il fournit une vision clé pour articuler le point de vue de l'utilisateur et les domaines scientifiques sous-jacents. Il est principalement basé sur la réutilisation de l'ontologie légère SOSA (Sensor, Observation, Sample, and Actuator) pour exploiter efficacement d'autres ontologies existantes afin d'améliorer la découverte et la réutilisation de jeux de données provenant de l'observation de la Terre et de la vie. Le principal avantage du modèle de métadonnées proposé est qu'il étend la description technique, généralement fournie par les modèles de métadonnées existants, avec la description du contexte d'observation, ce qui permet d'adopter le point de vue de l'utilisateur.</rdfs:comment>
-    <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+    <!-- No custom datatype is given for gmLiteral  -->
+    <!-- <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/> -->
     <owl:imports rdf:resource="https://raw.githubusercontent.com/ElVinto/modified_ontos/master/SSN-EXT/ssn-ext_modified.ttl"/>
-    <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+    <!-- No custom datatype is given for xsd:duration   -->
+    <!-- <owl:imports rdf:resource="http://www.w3.org/2006/time"/> -->
     <rdfs:label xml:lang="fr">Modèle de métadonnées centré utilisateur pour la découverte et la réutilisation des données en sciences du vivant, de la Terre, et de l'environnement (UCMM)</rdfs:label>
   </owl:Ontology>
   <owl:Class rdf:about="http://purl.org/voc/cpm#ObservableProperty">
@@ -79,12 +82,12 @@
     <rdfs:domain rdf:resource="http://sweetontology.net/repr#Representation"/>
     <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalInterval"/>
   </owl:ObjectProperty> 
-  <!-- Why do we need to redefine cpm#objectOfInterest and why we do not import ?-->
+  <!-- Why do we need to redefine cpm#objectOfInterest and why not an import ?-->
   <owl:ObjectProperty rdf:about="http://purl.org/voc/cpm#objectOfInterest">
     <rdfs:domain rdf:resource="http://purl.org/voc/cpm#ObservableProperty"/>
     <rdfs:range rdf:resource="http://purl.org/voc/cpm#ObjectOfInterest"/>
   </owl:ObjectProperty>
-  <!-- Why do we need to redefine cpm#property and not import -->
+  <!-- Why do we need to redefine cpm#property and why not import -->
   <owl:ObjectProperty rdf:about="http://purl.org/voc/cpm#property">
     <rdfs:domain rdf:resource="http://purl.org/voc/cpm#ObservableProperty"/>
     <rdfs:range rdf:resource="http://purl.org/voc/cpm#Property"/>
