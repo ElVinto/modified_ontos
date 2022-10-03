@@ -1,0 +1,30 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:cpm="http://purl.org/voc/cpm#"
+    xmlns:ssn-ext="http://www.w3.org/ns/ssn/ext"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:sosa="http://www.w3.org/ns/sosa/"
+    xmlns:geo="http://www.opengis.net/ont/geosparql#"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:ssn="http://www.w3.org/ns/ssn/"
+    xmlns:ucmm="http://www.ucmm.org#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://purl.org/ucmm">
+  <!--
+    <owl:imports rdf:resource="http://www.w3.org/ns/ssn/ext"/>
+    -->
+    <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+    <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+    
+    <dct:creator>Valentina</dct:creator>
+    <rdfs:label xml:lang="en">User Centric Metadata Model</rdfs:label>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/ObservationCollection"/>
+  <owl:ObjectProperty rdf:about="http://purl.org/ucmm#hasAggregatedResult">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/ucmm#hasDataRepresentation"/>
+</rdf:RDF>

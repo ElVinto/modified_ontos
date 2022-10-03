@@ -1,0 +1,102 @@
+<rdf:RDF
+    xmlns:repr="http://sweetontology.net/repr#"
+    xmlns:cpm="http://purl.org/voc/cpm#"
+    xmlns:unit="http://qudt.org/2.1/vocab/unit"
+    xmlns:sf="http://www.opengis.net/ont/sf#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:obo="http://purl.obolibrary.org/obo/"
+    xmlns:sosa="http://www.w3.org/ns/sosa/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:ucmm="http://purl.org/UCMM/v1/"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ssn-ext="http://www.w3.org/ns/ssn/ext"
+    xmlns:sdo="http://schema.org/"
+    xmlns:asgv="http://aims.fao.org/aos/agrovoc/"
+    xmlns:j.0="http://www.ucmm.org/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:gn="http://www.geonames.org/ontology#"
+    xmlns="http://example.org/"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.1="http://sweetontology.net/repr/"
+    xmlns:geo="http://www.opengis.net/ont/geosparql#"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:ssn="http://www.w3.org/ns/ssn/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  <owl:Ontology rdf:about="http://purl.org/ucmm">
+    <dct:contributor rdf:parseType="Resource">
+      <foaf:name>Jean-Christophe Deconnets</foaf:name>
+      <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0002-4142-5289"/>
+      <sdo:affiliation>
+        <rdf:Description rdf:nodeID="A0">
+          <foaf:name>Institut de Recherche pour le Développement</foaf:name>
+          <foaf:homepage>https://www.ird.fr</foaf:homepage>
+        </rdf:Description>
+      </sdo:affiliation>
+    </dct:contributor>
+    <dct:creator rdf:parseType="Resource">
+      <foaf:name>Valentina Beretta</foaf:name>
+      <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0002-1060-3935"/>
+      <sdo:affiliation rdf:nodeID="A0"/>
+    </dct:creator>
+    <rdfs:label xml:lang="en">A user-centric metadata model to foster sharing and reuse of multidisciplinary datasets in environmental and life sciences (UCMM)</rdfs:label>
+    <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2020-06-04</dct:modified>
+    <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/ssn/ext"/>
+    <dct:contributor rdf:parseType="Resource">
+      <foaf:name>Isabelle Mougenot</foaf:name>
+      <sdo:affiliation rdf:parseType="Resource">
+        <foaf:name>Université de Montpellier</foaf:name>
+        <foaf:homepage>https://www.umontpellier.fr</foaf:homepage>
+      </sdo:affiliation>
+      <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0002-1287-3269"/>
+    </dct:contributor>
+    <vann:preferredNamespacePrefix>ucmm</vann:preferredNamespacePrefix>
+    <dct:contributor rdf:parseType="Resource">
+      <foaf:name>Muhammad Arslan</foaf:name>
+      <sdo:affiliation rdf:nodeID="A0"/>
+      <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0003-3682-7002"/>
+    </dct:contributor>
+    <rdfs:comment xml:lang="fr">UCMM est un modèle de métadonnées flexible qui décrit les ensembles de données de diverses disciplines en utilisant un paradigme commun basé sur le concept d'observation. Il fournit une vision clé pour articuler le point de vue de l'utilisateur et les domaines scientifiques sous-jacents. Il est principalement basé sur la réutilisation de l'ontologie légère SOSA (Sensor, Observation, Sample, and Actuator) pour exploiter efficacement d'autres ontologies existantes afin d'améliorer la découverte et la réutilisation de jeux de données provenant de l'observation de la Terre et de la vie. Le principal avantage du modèle de métadonnées proposé est qu'il étend la description technique, généralement fournie par les modèles de métadonnées existants, avec la description du contexte d'observation, ce qui permet d'adopter le point de vue de l'utilisateur.</rdfs:comment>
+    <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+    <rdfs:label xml:lang="fr">Modèle de métadonnées centré utilisateur pour la découverte et la réutilisation des données en sciences du vivant, de la Terre, et de l'environnement (UCMM)</rdfs:label>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://purl.org/voc/cpm#ObservableProperty">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://sweetontology.net/repr#Representation"/>
+  <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/spatial">
+    <rdfs:domain rdf:resource="http://sweetontology.net/repr#Representation"/>
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/Location"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/voc/cpm#unitOfMeasure">
+    <rdfs:domain rdf:resource="http://purl.org/voc/cpm#ObservableProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/temporal">
+    <rdfs:domain rdf:resource="http://sweetontology.net/repr#Representation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalInterval"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/ucmm/hasAggregatedResult">
+    <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/voc/cpm#objectOfInterest">
+    <rdfs:domain rdf:resource="http://purl.org/voc/cpm#ObservableProperty"/>
+    <rdfs:range rdf:resource="http://purl.org/voc/cpm#ObjectOfInterest"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/ucmm/hasDataRepresentation">
+    <rdfs:range rdf:resource="http://sweetontology.net/repr#Representation"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/voc/cpm#property">
+    <rdfs:domain rdf:resource="http://purl.org/voc/cpm#ObservableProperty"/>
+    <rdfs:range rdf:resource="http://purl.org/voc/cpm#Property"/>
+  </owl:ObjectProperty>
+</rdf:RDF>
