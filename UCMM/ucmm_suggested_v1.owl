@@ -8,7 +8,7 @@
     xmlns:obo="http://purl.obolibrary.org/obo/"
     xmlns:sosa="http://www.w3.org/ns/sosa/"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    xmlns:ucmm="http://purl.org/UCMM/v1/"
+    xmlns:ucmm="https://github.com/ElVinto/modified_ontos/edit/master/UCMM/ucmm_suggested_v1.owl#"
     xmlns:vann="http://purl.org/vocab/vann/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -23,7 +23,8 @@
     xmlns:geo="http://www.opengis.net/ont/geosparql#"
     xmlns:dcat="http://www.w3.org/ns/dcat#"
     xmlns:ssn="http://www.w3.org/ns/ssn/"
-    xmlns:foaf="http://xmlns.com/foaf/0.1/">
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xml:base="https://github.com/ElVinto/modified_ontos/edit/master/UCMM/ucmm_suggested_v1.owl#">
   <owl:Ontology rdf:about="http://purl.org/ucmm">
     <dct:creator rdf:parseType="Resource">
       <foaf:name>Valentina Beretta</foaf:name>
